@@ -5,10 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style.css">
-    <link rel="icon" href="icon.svg">
+    <link rel="icon" href="assets/library-108.png">
     <title>Library</title>
 </head>
 <body>
+    <div class="header">
+        <h1>
+            Library
+        </h1>
+        <div class="User">
+            <div class="login">
+                <button>
+                    <a href="">
+                        Login
+                    </a>
+                </button>
+
+            </div>
+            <div class="create-account">
+                <button>
+                    <a href="">Create Account</a>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="form">
+        <div class="labels">
+            <label for="bookName">Book Name</label>
+            <label for="AuthorName">Author</label>
+            <label for="pages">Number Of pages</label>   
+
+        </div>
+        <div class="inputs">
+            <input type="text" id="bookName" required>
+            <input type="text id=AuthorName" required>
+            <input type="text" id="pages" required>
+            <div class="submit">
+                <input type="checkbox" id="read">
+                <label for="read">Have you read this book?</label><br>
+                <button class="add">
+                    Add Now
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="addbook">
+            <button class="addbook">
+                    <h1>+</h1>
+                    <h1>Add new Book</h1>
+            </button>
+        </div>
+        <div class="books">
+            <div class="quote">
+                <h1>Today's reader is a tomorrow's leader</h1>
+            </div>
+        </div>
+    </div>
     <script src="Script.js"></script>  
 </body>
 </html>

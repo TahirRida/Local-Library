@@ -1,0 +1,114 @@
+/* importing necessary fonts ! downloaded from Google Fonts */
+@font-face {
+    font-family:"Title";
+    src:url(assets/TiltPrism-Regular-VariableFont_XROT\,YROT.ttf);
+}
+
+/* Animation */
+
+@keyframes append-animate {
+	from {
+		transform: scale(0);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;	
+	}
+}
+
+/* Setting body's Style */
+body {
+    margin: 0;
+    display: flex;
+    flex-direction:column;
+    background-color:#e2e8f0;
+
+}
+/* setting header's Style */
+.header {
+    box-shadow:1cm;
+    padding-left: 10rem;
+    font-family: "Title",sans-serif;
+    background-color: white;
+    display : flex;
+    justify-content: space-between;
+}
+
+/* Styling the main content div */
+.main-content {
+    background-color:#e2e8f0;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    padding-top:3rem;
+}
+
+/* Styling user account related buttons */
+
+.User {
+    display:flex;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+    padding-right:10rem;
+}
+button {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: fit-content;
+    height: 35px;
+    border:none;
+    border-radius:10%;
+    background-color:#4ade80;
+}
+button:hover {
+    transform:scale(1.2);
+}
+.login button {
+    background-color:#e2e8f0 ;
+}
+.addbook button {
+    border-radius: 5%;
+    height:fit-content;
+    display:flex;
+    gap:10px;
+}
+.addbook {
+    display:flex;
+    justify-content: center;
+    height:fit-content;
+}
+.books {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    display:grid;
+}
+a {
+    text-decoration: none;
+    color:black;
+}
+.quote {
+    font-family:"Title",sans-serif;
+}
+.inputs {
+    padding-top:42px;
+}
+.labels,.inputs {
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+.form {
+    padding-top:40px;
+    display:none;
+    gap:20px;
+    justify-content:center;
+    align-items: center;
+    animation: append-animate .3s linear;
+}
+.add {
+    margin-top:20px;
+    margin-left:140px;
+}
