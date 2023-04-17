@@ -78,12 +78,18 @@ button:hover {
     justify-content: center;
     height:fit-content;
 }
+.addbook1 {
+    display:flex;
+    justify-content: center;
+    height:fit-content;
+}
 .books {
     display:flex;
     justify-content: center;
     align-items: center;
-    padding:10px;
-    display:grid;
+    padding:30px;
+    row-gap:10px;
+    column-gap:0px;
 }
 a {
     text-decoration: none;
@@ -91,14 +97,12 @@ a {
 }
 .quote {
     font-family:"Title",sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 .inputs {
-    padding-top:42px;
-}
-.labels,.inputs {
-    display:flex;
-    flex-direction:column;
-    gap:5px;
+    padding-top:11px;
 }
 .form {
     padding-top:40px;
@@ -108,7 +112,55 @@ a {
     align-items: center;
     animation: append-animate .3s linear;
 }
+.inputs,.labels {
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+.labels {
+    margin-top:-90px;
+}
 .add {
     margin-top:20px;
     margin-left:140px;
+    margin-bottom:20px;
+}
+
+/* Styling the error that would be displayed if the user doesn't fill the form correctly */
+.error {
+    color:red;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book {
+    padding:10px;
+    background-color:white;
+    width:max-content;
+    border-radius:5%;
+    box-shadow: 3px 3px 3px gray;
+    height:220px;
+}
+
+.read {
+    background-color:#4ade80;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.read:active,.not-read:active {
+    background-color:#cbd5e1;
+}
+.button {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+hr {
+    padding-left:10%;
+    padding-right:10%;
+}
+.not-read {
+    background-color:red;
 }
