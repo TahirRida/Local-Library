@@ -23,6 +23,7 @@ body {
     display: flex;
     flex-direction:column;
     background-color:#e2e8f0;
+    justify-content: space-between;
 
 }
 /* setting header's Style */
@@ -88,6 +89,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     padding:30px;
+    grid-auto-rows:350px;
     row-gap:10px;
     column-gap:0px;
 }
@@ -163,4 +165,14 @@ hr {
 }
 .not-read {
     background-color:red;
+}
+.form {
+    background-color:#cbd5e1;
+}
+.footer {
+    background-color: #a3a3a3;
+    margin-top:30vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }

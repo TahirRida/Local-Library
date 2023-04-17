@@ -1,3 +1,8 @@
+//inserting today's date on the web page
+let rights = document.querySelector(".rights");
+let date = new Date();
+rights.textContent += date.getFullYear();
+
 // initialization of the library
 let Library = [];
 
@@ -74,7 +79,6 @@ addNow.addEventListener("click",(e)=>{
             booksDiv.removeChild(quote);
             booksDiv.style.display = "grid";
             booksDiv.style.gridTemplateColumns = "repeat(5,1fr)";
-            booksDiv.style.gridTemplateRows = "repeat(100,1fr)";
         }
         createDivBook(name,author,page,readOrNot);
         form.style.display = "none";
@@ -97,7 +101,7 @@ function createDivBook(bookTitle,Author,pages,read){
     bookDiv.innerHTML  += "<h3>Book Title : "+book.title+"<hr></h3><h3>Author :"+book.author+"<hr></h3>"
     +"<h3> Number Of Pages :"+book.numberOfPages+"<hr>";
     if (read === true) {
-        bookDiv.innerHTML += "<br><div class='button'><button class='read'>read</button>";
+        bookDiv.innerHTML += "<br><div class='button'><button class='read'>Read</button>";
     }
     if (read === false) {
         bookDiv.innerHTML += "<br><div class='button'><button class='not-read'>Not read</button>";
@@ -114,12 +118,12 @@ function changeClass(initialClassName){
     if(initialClassName.classList.contains('read')){
         initialClassName.classList.remove('read');
         initialClassName.classList.add("not-read");
-        initialClassName.textContent = "not-read";
+        initialClassName.textContent = "Not read";
         exit; // otherwise the function will go to the second if and execute it
     }
     if(initialClassName.classList.contains("not-read")){
         initialClassName.classList.remove("not-read");
         initialClassName.classList.add("read");
-        initialClassName.textContent = "read";
+        initialClassName.textContent = "Read";
     }
 }
