@@ -54,39 +54,43 @@ let bookName = document.getElementById("bookName");
 let AuthorName = document.getElementById("AuthorName");
 let pages = document.getElementById("pages");
 let read = document.getElementById("read");
-let body = document.querySelector("body");
+let submit = document.querySelector(".submit");
 let addNow = document.querySelector(".add");
-addNow.addEventListener("click",(e)=>{
-    let error = document.querySelector(".error");
-    // initializing the input variables
-    let name = bookName.value;
-    let author = AuthorName.value;
-    let page = pages.value;
-    let readOrNot = read.checked;
-    if (name === "" || author === "" || page === ""){
-        if (!body.contains(error)){
-            body.innerHTML += "<div class='error'> *Please, fill all the informations required </div>";
-        }
-    }
-    else {
+form.addEventListener("click",(e)=>{
+    if(e.target.classList.contains("add")){
+        console.log("addNow");
         let error = document.querySelector(".error");
-        if (body.contains(error)){
-            body.removeChild(error);
+        // initializing the input variables
+        let name = bookName.value;
+        let author = AuthorName.value;
+        let page = pages.value;
+        let readOrNot = read.checked;
+        if (name === "" || author === "" || page === ""){
+            if (!submit.contains(error)){
+                submit.innerHTML += "<div class='error'> *Please, fill all the informations required </div>";
+                let addNow = document.querySelector(".add");
+            }
         }
-        addNewBook.style.display="flex";
-        if (Library.length === 0) {
-            // In order to remove the quote that appears when firstly opening the website
-            booksDiv.removeChild(quote);
-            booksDiv.style.display = "grid";
-            booksDiv.style.gridTemplateColumns = "repeat(5,1fr)";
+        else {
+            let error = document.querySelector(".error");
+            if (submit.contains(error)){
+                submit.removeChild(error);
+            }
+            addNewBook.style.display="flex";
+            if (Library.length === 0) {
+                // In order to remove the quote that appears when firstly opening the website
+                booksDiv.removeChild(quote);
+                booksDiv.style.display = "grid";
+                booksDiv.style.gridTemplateColumns = "repeat(5,1fr)";
+            }
+            createDivBook(name,author,page,readOrNot);
+            form.style.display = "none";
+            addNewBook.style.display = "flex";
+            bookName.value = "";
+            AuthorName.value ="";
+            pages.value ="";
+            read.checked = false;
         }
-        createDivBook(name,author,page,readOrNot);
-        form.style.display = "none";
-        addNewBook.style.display = "flex";
-        bookName.value = "";
-        AuthorName.value ="";
-        pages.value ="";
-        read.checked = false;
     }
 
 
